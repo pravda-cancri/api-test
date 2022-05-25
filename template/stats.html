@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<title>Pravda</title>
+    <meta content="Pravda" property="og:title" />
+    <meta content="my main site" property="og:description" />
+    <meta content="https://api.ent1ty.space/api/images?file=server-icon.png" property="og:image"/>
+    <meta content="test.ent1ty.space" property="og:url" />
+    <link rel="shortcut icon" type="image/png" href="https://api.ent1ty.space/api/images?file=a1616.png"/>
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+    <meta http-equiv="refresh" content="1200 ;url=https://api.ent1ty.space/api/update">
+   <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+<style>
+body
+{
+    background-color: #0097a7;
+}
+a,h1,h2
+{
+    font-family:verdana;
+    color:#29fb9b;
+}
+.img{
+    width: 30vw;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.boxout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        ". hc hl"
+        "info1 info2 info3"
+        "info4 info5 info6";
+    row-gap: 3vmin;
+}
+    
+.boxout > div {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    background-color:#077087ff;
+    background-size: 100%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 70%;
+    max-width: 80%;
+    white-space: pre-line;
+}
+
+.hc {
+    grid-area: hc;
+}
+.hl {
+    grid-area: hl;
+}
+.btn {
+    height:100%;
+    color: #29fb9b;
+    
+}
+.btn:hover {color: #000000;}
+.b1 {
+    grid-area: info1;
+}
+.b2 {
+    grid-area: info2;
+}
+.b3 {
+    grid-area: info3;
+}
+.b4 {    text-align: center;
+    font-size: 70%;
+    grid-area: info4;
+}
+.b5 {
+    grid-area: info5;
+}
+.b6 {
+    grid-area: info6;
+}
+</style>
+<body >
+    <div class="img">
+         <a href="/">
+             <img alt="main" src="https://api.ent1ty.space/api/images?file=a.png" width=100 height=100>
+         </a>
+    </div>
+    <div class="boxout">
+        <div class="hc">
+            <h1>all api calls</h1>
+        </div>
+        <div class="b1">
+            <h1>{{ var1name }}</h1>
+        </div>
+        <div class="b2">   
+            <h1>{{ var2name }}</h1>
+        </div>
+        <div class="b3"> 
+            <h1>{{ var3name }}</h1>
+        </div>
+        <div class="b4">
+            <h1>{{ var1 }}</h1>
+        </div>
+        <div class="b5">   
+            <h1>{{ var2 }}</h1>
+        </div>
+        <div class="b6">    
+            <h1>{{ var3 }}</h1>
+        </div>
+        <div class="hl">    
+            <a class="btn" href="/api/update?what=log">api</a>
+        </div>
+        
+        
+    </div>
+</body>

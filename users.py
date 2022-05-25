@@ -1,4 +1,5 @@
 import json
+from logg import log
 v="usernames/users.json"
 def _save():
     with open(v, 'w') as f:
@@ -15,8 +16,9 @@ _open()
 from flask import Blueprint,request
 user = Blueprint('user', __name__)
 
-@user.route('/user/<uuid>', methods=['GET'])
+@user.route('/api/user/<uuid>', methods=['GET'])
 def run(uuid):
+    log(request.access_route[0],"GET",uuid)
     _open()
     args = request.args
     time = args.get('time')
@@ -33,7 +35,7 @@ def run(uuid):
     _save()
     return send
 
-@user.route('/get', methods=['GET'])
+@user.route('/api/get', methods=['GET'])
 def done():
     _open()
     args = request.args
